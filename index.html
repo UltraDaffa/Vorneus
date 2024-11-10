@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat untuk Kamu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tampilan Amplop -->
+    <div class="envelope" id="envelope">
+        <div class="spotlight top-left"></div>
+        <div class="spotlight top-right"></div>
+        <div class="envelope-content">
+            <div class="envelope-icon">✉️</div>
+            <button class="open-button" onclick="openLetter()">Buka Surat</button>
+        </div>
+    </div>
+
+    <!-- Tampilan Surat Terbuka -->
+    <div class="letter" id="letter">
+        <div class="spotlight top-left"></div>
+        <div class="spotlight top-right"></div>
+        <div class="letter-content">
+            <h2>Untuk Kamu</h2>
+            <p>Sayang, maafkan aku atas segala kesalahan yang pernah kulakukan. Semoga kita tetap saling menguatkan walau jarak memisahkan.</p>
+            <p>Semoga surat ini bisa mengobati rasa rindumu. Ingat, aku selalu ada di sini untukmu.</p>
+            <button class="back-button" onclick="backToEnvelope()">Kembali</button>
+        </div>
+    </div>
+
+    <script>
+        function openLetter() {
+            document.getElementById("envelope").style.display = "none";
+            document.getElementById("letter").style.display = "flex";
+        }
+
+        function backToEnvelope() {
+            document.getElementById("letter").style.display = "none";
+            document.getElementById("envelope").style.display = "flex";
+        }
+    </script>
+</body>
+</html>

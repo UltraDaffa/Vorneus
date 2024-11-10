@@ -1,0 +1,118 @@
+/* Umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5c6e3;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.spotlight {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0) 70%);
+}
+
+.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.top-right {
+    top: 10px;
+    right: 10px;
+}
+
+/* Tampilan Amplop */
+.envelope {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #ff85a2;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.envelope-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+    animation: bounce 1s infinite alternate;
+}
+
+.open-button {
+    margin-top: 10px;
+}
+
+/* Tampilan Surat */
+.letter {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease;
+}
+
+.letter-content {
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.letter h2 {
+    font-size: 24px;
+    color: #ff69b4;
+    margin-bottom: 15px;
+}
+
+.back-button {
+    margin-top: 20px;
+}
+
+/* Animasi */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
